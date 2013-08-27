@@ -1,0 +1,20 @@
+from django.contrib import admin
+from pmv.models import *
+
+admin.site.register(Status_Type)
+admin.site.register(Service_Type)
+admin.site.register(Pet_Type)
+admin.site.register(Pet_Breed_Type)
+admin.site.register(Owner_Type)
+admin.site.register(Location_Type)
+admin.site.register(Contact_Type)
+admin.site.register(Customer)
+admin.site.register(Practice)
+admin.site.register(Pet)
+admin.site.register(Vet)
+admin.site.register(Search)
+admin.site.register(Practice_Vet)
+admin.site.register(Practice_Parent_Child)
+admin.site.register(Search_result)
+admin.site.register(Phone)
+admin.site.register(Deal)

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+<script>
+	function submit(){
+		var animal = document.getElementById("animal").value;
+		alert(animal);
+		var service = document.getElementById("service").value;
+		var zip = document.getElementById("zip").value;
+		var radius = document.getElementById("radius").value;
+		var results = "Animal: " + animal + " Service: " + service + " ZIP: " + zip + " Radius: " + radius;
+		document.getElementById("results").innerHTML = results;
+	}
+</script>
+
+<form action="/submit" method="POST">
+	<fieldset>
+	<legend>What do you need?</legend>
+		<input id="animal" type="text" placeholder="Animal">
+		<input id="service" type="text" placeholder="Service">
+		<input id="zip" type="text" placeholder="ZIP">
+		<input id="radius" type="text" placeholder="Radius (mi)">
+		<input type="button">
+	</fieldset>
+</form>
+<input type="button" value="Find a Vet!" onclick="submit();">
+
+<h2>Results!</h2>
+<p id="results"></p>
+{% endblock %}
